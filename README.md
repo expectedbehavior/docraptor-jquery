@@ -1,6 +1,6 @@
 # jquery.docraptor.js
 
-Easily create pdf/xls docs using (DocRaptor)[http://docraptor.com] with jQuery and simple links.
+Easily create pdf/xls docs using [DocRaptor](http://docraptor.com) with jQuery and simple links.
 
 ### in a linked javascript file...
 
