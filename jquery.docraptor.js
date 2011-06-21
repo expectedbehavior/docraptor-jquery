@@ -21,6 +21,7 @@
       user_credentials: 'INSERT YOUR CREDENTIALS'
     });
 
+  });
 
   ================
   in your html...
