@@ -2,36 +2,6 @@
 
 // DocRaptor API Documentation - http://docraptor.com/documentation
 
-// USAGE
-/*
-
-  ================
-  in a reference javascript file...
-
-  $(document).ready(function(){
-
-    $(".whatever").docraptor({
-      doc: {
-        test: true,
-        document_type: 'pdf',
-        name: 'document',
-        strict: 'none',
-        javascript: true
-      },
-      user_credentials: 'INSERT YOUR CREDENTIALS'
-    });
-
-  });
-
-  ================
-  in your html...
-
-  <a href="http://example.com/page_i_want_to_convert_to_pdf.html" title="Here is my title" class="whatever">Click me for a PDF</a>
-
-  });
-
-*/
-
 (function($) {
 
   $.fn.docraptor = function(options) {
@@ -44,6 +14,19 @@
         if($(link).attr("title").length > 0) {
           opts["doc"]["name"] = $(link).attr("title");
         }
+        $.each($(link).data(), function (k, v) { 
+          var split_key = k.split("-");
+          if(split_key[0] == "doc"){
+            if(split_key[1] == "prince_options"){
+              // throwing errors currently
+              // opts["doc"]["prince_options"][split_key[2]] = v;
+            } else {
+              opts["doc"][split_key[1]] = v;
+            };
+          };
+        });
+        
+        // console.log(opts);
         download("http://docraptor.com/docs", opts);
       })
     });
@@ -74,16 +57,12 @@
 
   };
 
-  // the doc part of this will get overwritten anyway
   $.fn.docraptor.defaults = {
     doc: {
-      test: true,
-      document_type: 'pdf',
-      name: 'document',
-      strict: 'none',
-      javascript: false
+      // prince_options: {}
     },
-    user_credentials: 'XXX'
+    user_credentials: 'INSERT YOUR CREDENTIALS'
   }; 
+
 
 })(jQuery);
