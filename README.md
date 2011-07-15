@@ -105,6 +105,18 @@ Now your html can be simplified to this...
     
 If a specific link needs to use an alternative URL, simply provide the full URL; the default will be overridden for that instance.
 
+# Example: Automatic Defaults for Testing and Production
+
+You will likely be running DocRaptor in test mode in development.  It can be convenient to set some defaults that automatically change based upon your development, staging and production environments.
+
+In the example below the domain is detected.  With this default, DocRaptor will run in test mode unless requested from the production domain.  This will also allow you to provide only file names in your links (see "Setting a default domain" above) across multiple locations.
+
+    $.fn.docraptor.domain = window.location.protocol + '//' + window.location.host;
+    $.fn.docraptor.user_credentials = 'XXX';
+    $.fn.docraptor.defaults = {
+      test: !($.fn.docraptor["domain"] == "http://my-production-domain.com"),
+    }
+
 ---
     
 DocRaptor API Documentation - http://docraptor.com/documentation
