@@ -21,6 +21,11 @@
           opts["name"] = $(link).attr("title");
         }
 
+        // ensure that prince_options exist
+        if(!!opts["prince_options"]){
+          opts["prince_options"] = {}
+        }
+
         // any standard docraptor doc options can be set via data attributes
         // example: data-doc-document_url="my_file_to_convert.html"
         // example of prince_options: data-doc-prince_options-baseurl="http://example.com"
