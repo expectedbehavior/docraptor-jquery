@@ -20,18 +20,13 @@ https://github.com/expectedbehavior/doc_raptor_examples/blob/master/javascript/j
 ### in your html...
 
     <a href="http://example.com/page_i_want_to_convert_to_pdf.html" title="my_document_name" class="whatever">Click me for a PDF</a>
-    
-This will provide DocRaptor with the following...
-  
-    {
-      doc: {
-        document_type: 'pdf',
-        document_url: 'http://example.com/page_i_want_to_convert_to_pdf.html',
-        name: 'my_document_name'
-      },
-      user_credentials: 'XXXXX-USER-CREDENTIALS'
-    }
-    
+
+This will create a document with the following settings...
+
+* document_type: 'pdf',
+* document_url: 'http://example.com/page_i_want_to_convert_to_pdf.html',
+* name: 'my_document_name'
+
 
 # Example with more options
 You can provide any of the DocRaptor options within the javascript call to "docraptor". 
