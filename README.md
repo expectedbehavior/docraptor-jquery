@@ -2,6 +2,11 @@
 
 Easily create pdf/xls docs using [DocRaptor](http://docraptor.com) with jQuery and simple links.
 
+# Fully functioning example page
+
+Our examples repo has a page with this library integrated:
+https://github.com/expectedbehavior/doc_raptor_examples/blob/master/javascript/jquery_library_example.html
+
 # Simplest Usage
 
 ### in a linked javascript file...
