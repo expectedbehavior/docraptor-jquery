@@ -14,7 +14,7 @@ https://github.com/expectedbehavior/doc_raptor_examples/blob/master/javascript/j
     $(".whatever").docraptor({
         document_type: 'pdf'
       },
-      'XXXXX-USER-CREDENTIALS'
+      'YOUR_API_KEY_HERE'
     );
     
 ### in your html...
@@ -46,7 +46,7 @@ You can provide any of the DocRaptor options within the javascript call to "docr
           user_password: "hello"
         }
       },
-      'XXXXX-USER-CREDENTIALS'
+      'YOUR_API_KEY_HERE'
     );
 
 # Via Data Attributes
@@ -83,17 +83,17 @@ This will provide DocRaptor with the following...
           user_password: 'hello'
         }
       },
-      user_credentials: 'XXXXX-USER-CREDENTIALS'
-    } 
-    
+      user_credentials: 'YOUR_API_KEY_HERE'
+    }
+
 You can use either the "href" or "data-doc-document_url" attributes to supply the URL and either the "title" or "data-doc-name" attributes for the name.  The data attributes will always override standard attributes.
 
 # Setting default user_credentials
 
 Default user_credentials can be set via this method...
 
-    $.fn.docraptor["user_credentials"] = 'XXXXX-USER-CREDENTIALS';
-    
+    $.fn.docraptor["user_credentials"] = 'YOUR_API_KEY_HERE';
+
 This will allow you to use doc_raptor without providing the user_credentials multiple times.  Setting up elements to use doc_raptor could be as simple as this...
 
     $(".whatever").docraptor();
