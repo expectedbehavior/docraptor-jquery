@@ -17,7 +17,7 @@
         opts["document_url"] = $(link).attr("href");
 
         // option to set name of document to produce via title attribute
-        if($(link).attr("title").length > 0) {
+        if($(link).attr("title") && $(link).attr("title").length > 0) {
           opts["name"] = $(link).attr("title");
         }
 
